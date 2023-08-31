@@ -34,6 +34,22 @@ int enqueue(LinkedList *list, void *data){
 
 
 }
+
+int push(LinkedList *list, void *data){
+ Node *Newnode =(Node*)malloc(sizeof((node));
+    NewNode->data = data; return -1;
+    NewNode->next = NULL;
+    if (isEmpty(list))
+    list-> first = NewNode;
+    else{
+    NewNode->next list -> first;
+    list -> first = NewNode;
+    }
+list->size++;
+return -1;
+
+}
+
 void* dequeue(LinkedList *list){
     if((isEmpty(list)) return NULL // ira verificar se existe algo na lista
    
@@ -47,7 +63,7 @@ void* dequeue(LinkedList *list){
 
 
 }
-   
+
 
 void* first(LinkedList *list){
     if (isEmpty((list)) Return NULL;
@@ -55,8 +71,19 @@ void* first(LinkedList *list){
     
     
 }
-void* last(LinkedList *list);
-int push(LinkedList *list, void *data);
+void* last(LinkedList *list){
+    void *data = NULL
+    if (isEmpty(list)){
+    node *aux = list -> first;
+    while (aux -> next !=NULL);
+    aux = aux -> next 
+    data = aux -> data;
+    }
+    return data;
+    
+}
+
+
 void* pop(LinkedList *list){
     return dequeue(list);
 }
